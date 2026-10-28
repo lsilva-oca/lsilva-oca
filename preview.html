@@ -1,69 +1,33 @@
-<!doctype html>
+﻿<!doctype html>
+<html lang="es">
 <meta charset="utf-8">
-<title>profile assets preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leandro Silva · README preview</title>
 <style>
-  :root { color-scheme: dark }
-  body { background:#0d1117; color:#c9d1d9; font:15px/1.5 ui-sans-serif,Segoe UI,system-ui,sans-serif;
-         margin:0; padding:40px; }
-  h1 { font-size:20px; color:#aa9bef; letter-spacing:.02em }
-  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:#8b949e;
-       border-bottom:1px solid #21262d; padding-bottom:8px; margin:44px 0 18px }
-  .row { display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start }
-  .card { background:#0d1117; border:1px solid #21262d; border-radius:10px; padding:18px }
-  .card.light { background:#fff }
-  .tag { font:11px ui-monospace,Consolas,monospace; color:#8b949e; display:block; margin-bottom:10px }
-  img { display:block; max-width:100% }
-  button { background:#21262d; color:#c9d1d9; border:1px solid #30363d; border-radius:6px;
-           padding:5px 12px; font:inherit; font-size:12px; cursor:pointer; margin-left:14px;
-           vertical-align:middle; text-transform:none; letter-spacing:0 }
-  button:hover { background:#30363d; border-color:#aa9bef; color:#aa9bef }
-  .missing { color:#8b949e; font-style:italic; font-size:13px }
+:root{color-scheme:dark}*{box-sizing:border-box}body{max-width:1050px;margin:auto;padding:32px 24px 60px;background:#0d1117;color:#e6edf3;font:16px/1.7 system-ui,sans-serif}h1,h2{color:#aa9bef}h2{margin-top:40px;border-bottom:1px solid #30283f;padding-bottom:12px;font:20px Consolas,monospace}img{max-width:100%;height:auto}a{color:#bcaaf4}header,footer{text-align:center}.links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.links a{padding:8px 18px;border:1px solid #393044;border-radius:8px;text-decoration:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.card{padding:20px;border:1px solid #30283f;border-radius:12px;background:#12101d}.card p{color:#afa4be}small{color:#9488aa}li{margin:12px 0}summary{cursor:pointer;color:#aa9bef}code{color:#aa9bef}
 </style>
-
-<h1>profile assets — local preview</h1>
-<p class="missing">Each asset is shown against both a dark and a light card, the way GitHub will render it.</p>
-
-<h2>banner <button id="replay-banner">replay</button></h2>
-<div class="row">
-  <div class="card"><span class="tag">banner-dark.v9.svg (on dark)</span>
-    <img class="banner" data-base="assets/banner-dark.v9.svg" src="assets/banner-dark.v9.svg" width="880" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'not generated yet — run scripts/banner/generate.py'}))"></div>
-  <div class="card light"><span class="tag" style="color:#57606a">banner-light.v9.svg (on light)</span>
-    <img class="banner" data-base="assets/banner-light.v9.svg" src="assets/banner-light.v9.svg" width="880" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'not generated yet'}))"></div>
+<header>
+<img src="assets/banner-dark.svg" alt="Terminal de Leandro Silva">
+<h1>Leandro Silva</h1>
+<p>Full Stack Software Engineer · Modernización legacy · Arquitectura BFF</p>
+<div class="links"><a href="https://leandro-silva.vercel.app/">Portfolio ↗</a><a href="https://www.linkedin.com/in/leandrosilva-/">LinkedIn ↗</a><a href="https://github.com/lsilva-oca">GitHub OCA ↗</a><a href="https://leandro-silva.vercel.app/cv_leandro_silva.pdf">CV ↗</a></div>
+</header>
+<h2>whoami</h2>
+<p>Soy <strong>Lean</strong>, Full Stack Software Engineer con más de <strong>5 años de experiencia</strong> creando aplicaciones web para empresas y organismos públicos. Me especializo en modernizar plataformas legacy y conectar interfaces modernas con los sistemas que ya están en producción.</p>
+<ul><li><strong>OCA / ePak:</strong> una plataforma con más de 227.000 usuarios registrados. Migraciones .NET MVC → React + TypeScript y liderazgo compartido del módulo Fulfillment.</li><li><strong>Frontend y backend:</strong> React, Next.js y BFF con NestJS, integrando ASP.NET, SOAP y SQL Server.</li><li><strong>Antes:</strong> desarrollo freelance web y mobile, y React, FastAPI y CI/CD en el sector público.</li><li>Abierto a oportunidades remotas en LATAM, US y Europa.</li></ul>
+<h2>cat stack.config</h2>
+<p>TypeScript · JavaScript · React · Next.js · NestJS · Node.js · Python · FastAPI · React Native · Chakra UI · SQL Server · SQLite · Cypress · Docker · Git · CI/CD</p>
+<h2>ls projects/</h2>
+<div class="grid">
+<div class="card"><a href="https://leandro-silva.vercel.app/">Portfolio ↗</a><p>Next.js, Chakra UI y GitHub API, con tema claro y oscuro.</p></div>
+<div class="card"><a href="https://herreria-silva.vercel.app/">Herrería Silva ↗</a><p>Una web para la herrería de mi padre, con contacto y herramientas para crear presupuestos.</p></div>
+<a href="https://github.com/leeansilva/cursor-hand"><img src="assets/card-cursor-hand-dark.svg" alt="Cursor Hand"></a>
+<a href="https://github.com/leeansilva/ultimate-mortal-kombat3-wiki"><img src="assets/card-ultimate-mortal-kombat3-wiki-dark.svg" alt="UMK3 Wiki"></a>
 </div>
-<script>
-  document.getElementById('replay-banner').onclick = () => {
-    document.querySelectorAll('img.banner').forEach(img => {
-      img.src = img.dataset.base + '?' + Date.now();
-    });
-  };
-</script>
-
-<h2>portrait <button id="replay">replay the load-in</button></h2>
-<div class="row">
-  <div class="card"><span class="tag">portrait-dark.svg (on dark)</span>
-    <img class="portrait" data-base="assets/portrait-dark.svg" src="assets/portrait-dark.svg" width="300" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'not generated yet — run dotify.py'}))"></div>
-  <div class="card light"><span class="tag" style="color:#57606a">portrait-light.svg (on light)</span>
-    <img class="portrait" data-base="assets/portrait-light.svg" src="assets/portrait-light.svg" width="300" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'not generated yet'}))"></div>
-</div>
-<script>
-  // The row-reveal runs once per image load, so force a fresh load to rewatch it.
-  document.getElementById('replay').onclick = () => {
-    document.querySelectorAll('img.portrait').forEach(img => {
-      img.src = img.dataset.base + '?' + Date.now();
-    });
-  };
-</script>
-
-<h2>skill radar</h2>
-<div class="row">
-  <div class="card"><span class="tag">radar-dark.svg</span><img src="assets/radar-dark.svg" width="440"></div>
-  <div class="card light"><span class="tag" style="color:#57606a">radar-light.svg</span><img src="assets/radar-light.svg" width="440"></div>
-</div>
-
-<h2>language radar</h2>
-<div class="row">
-  <div class="card"><span class="tag">radar-langs-dark.svg</span>
-    <img src="assets/radar-langs-dark.svg" width="440" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'generated by the Radar workflow (needs your username)'}))"></div>
-  <div class="card light"><span class="tag" style="color:#57606a">radar-langs-light.svg</span>
-    <img src="assets/radar-langs-light.svg" width="440" onerror="this.replaceWith(Object.assign(document.createElement('p'),{className:'missing',textContent:'not generated yet'}))"></div>
-</div>
+<h2>git remote -v</h2>
+<div class="grid"><div class="card"><a href="https://github.com/leeansilva">@leeansilva</a><p>Proyectos propios y experimentos.</p></div><div class="card"><a href="https://github.com/lsilva-oca">@lsilva-oca</a><p>Desarrollo profesional en OCA.</p></div></div>
+<p><img src="assets/card-stats-dark.svg" width="480" alt="Estadísticas de leeansilva"></p>
+<p><small>Estadísticas de la cuenta personal. El trabajo privado de OCA no está representado aquí.</small></p>
+<details><summary>Ver assets en tema claro</summary><p><img src="assets/banner-light.svg" alt="Banner claro"></p><img src="assets/card-stats-light.svg" width="480" alt="Estadísticas en tema claro"></details>
+<footer><p><small>Vista previa de contenido y assets. La presentación exacta del README depende de GitHub.</small></p></footer>
+</html>
