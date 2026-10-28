@@ -6,7 +6,7 @@
   <img src="assets/banner-dark.svg" width="100%" alt="Leandro Silva · Full Stack Software Engineer · React, Next.js, NestJS">
 </picture>
 
-# Leandro Silva
+# Leandro  Silva
 
 <a href="https://github.com/leeansilva"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=600&amp;size=23&amp;duration=2800&amp;pause=1000&amp;color=AA9BEF&amp;center=true&amp;vCenter=true&amp;width=850&amp;lines=Full+Stack+Software+Engineer;React+%2F+Next.js+%2F+NestJS+%2F+TypeScript;Modernizando+legacy%2C+construyendo+lo+que+sigue" alt="Full Stack Software Engineer · Modernización legacy y arquitectura BFF"></a>
 
